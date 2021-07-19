@@ -1,7 +1,7 @@
 import cv2
 #import numpy as np
 #from deepface import DeepFace
-face_classifier=cv2.CascadeClassifier(r'C:\Users\Kamesh Upmanyu\haarcascade_frontalface_default.xml')
+face_classifier=cv2.CascadeClassifier(r'haarcascade_frontalface_default.xml')
 def DetectFace():
     cam = cv2.VideoCapture(0)
 
