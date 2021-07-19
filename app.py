@@ -8,7 +8,7 @@ app = Flask(__name__)
 def hello_world():
     return render_template("index.html")
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/', methods=['POST'])
 def kam():
     if request.method == 'POST':
        model.DetectFace()
