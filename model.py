@@ -31,7 +31,6 @@ def DetectFace():
             
     cam.release()
     cv2.destroyAllWindows()
-    img=cv2.imread(r'sr.jpg')
     #if k%256 == 32:
      #result=DeepFace.analyze(frame,actions=['emotion'])
     #ans=result['dominant_emotion']
