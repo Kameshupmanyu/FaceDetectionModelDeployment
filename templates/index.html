@@ -53,8 +53,26 @@
 </head>
 <body>
     <h1>Welcome To Face Detection Site!</h1><br><br>
-    <p>When Camera Opens Press space to Capture your Image. Press Esc to cancel.</p>
-    <form action="/" method="POST">
+    
+    <h2>Select a file to upload</h2>
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+    
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="avatar">Choose a profile picture:</label>
+
+        <input type="file"
+               id="avatar" name="file"
+               accept="image/png, image/jpeg">
     <input type="submit" value="Run" title="click here to run">
 </form>
 </body>
